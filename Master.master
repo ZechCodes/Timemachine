@@ -1,0 +1,45 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Master.master.cs" Inherits="Master" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="cph_Head" runat="server" />
+	<!--Any header stuff goes here -->
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:Table id="tbl_Head" Width="100%" CellSpacing="0" runat="server">
+		    <asp:TableRow id="tr_Banner" BackColor="LightGray" runat="server">
+			    <asp:TableCell HorizontalAlign="right" ColumnSpan="4">
+				    Welcome, <asp:Label id="lbl_UserName" runat="server" /><br />
+                    <asp:LinkButton id="lnk_Logout" Text="Logout" runat="server" OnClick="lnk_Logout_Click" />
+			    </asp:TableCell>
+		    </asp:TableRow>
+		    <asp:TableRow id="tr_Quicklinks" HorizontalAlign="center" BackColor="LightBlue" runat="server">
+			    <asp:TableCell id="tcTimelog" HorizontalAlign="center">
+				    <a href="Timelog.aspx">Timelog</a>
+			    </asp:TableCell>
+			    <asp:TableCell id="tcStatistics" HorizontalAlign="center">
+				    <a href="Statistics.aspx">Statistics</a>
+			    </asp:TableCell>
+			    <asp:TableCell id="tcClassesProjects" HorizontalAlign="center" runat="server">
+				    <a href="ClassesProjects.aspx">Classes/Projects</a>
+			    </asp:TableCell>
+			    <asp:TableCell id="tcAdmin" HorizontalAlign="center" runat="server">
+				    <a href="Admin.aspx">Admin</a>
+			    </asp:TableCell>
+		    </asp:TableRow>
+	    </asp:Table>
+        <asp:ContentPlaceHolder id="cph_Body" runat="server" />
+        <!--Any main body stuff goes here. I don't think this should ever contain anything. -->
+    </div>
+    </form>
+</body>
+<foot>
+	<asp:ContentPlaceHolder id="cph_Foot" runat="server" />
+    <!--Any footer stuff goes here -->
+</foot>	
+</html>
